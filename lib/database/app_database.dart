@@ -11,4 +11,16 @@ class AppDatabase extends _$AppDatabase {
 
   @override
   int get schemaVersion => 1;
+
+  Future<void> tambahCatatanBaru(String title, String content) async {
+    final data = NotesCompanion.insert(title: title, content: content);
+
+    await into(notes).insert(data);
+  }
+
+  Future<List<Note>> ambilSemuaCatatan() async {
+    return await select(notes).get();
+  }
+
+ 
 }

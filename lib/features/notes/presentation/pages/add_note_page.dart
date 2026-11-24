@@ -1,6 +1,8 @@
 import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+// import 'package:notes_app/database/database_provider.dart';
+
 class AddNotePage extends ConsumerStatefulWidget {
   const AddNotePage({super.key});
 
@@ -27,7 +29,7 @@ class _AddNotePageState extends ConsumerState<AddNotePage> {
         actions: [
           IconButton(
             onPressed: () {
-              // TODO: INI NANTI DIISI LOGIKA
+              // final database = ref.read(databaseProvider);
             },
             icon: Icon(Icons.check_circle),
             iconSize: 44,
